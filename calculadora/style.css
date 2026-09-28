@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* CUERPO DE LA CALCULADORA */
+.calculadora {
+    width: 350px;
+    padding: 25px;
+    border-radius: 25px;
+    background: #1c1c1c;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* TÍTULO */
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado h1 {
+    color: white;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.encabezado p {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* PANTALLA */
+#pantalla {
+    width: 100%;
+    height: 75px;
+
+    margin-bottom: 20px;
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #dce5d8;
+    color: #111;
+
+    font-size: 30px;
+    text-align: right;
+
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTONES */
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.boton {
+    height: 60px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* EFECTO AL TOCAR */
+.boton:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* NÚMEROS */
+.numero {
+    background: #333;
+    color: white;
+}
+
+.numero:hover {
+    background: #444;
+}
+
+/* OPERADORES */
+.operador {
+    background: #f39c12;
+    color: white;
+}
+
+.operador:hover {
+    background: #ffad27;
+}
+
+/* DECIMAL */
+.decimal {
+    background: #555;
+    color: white;
+}
+
+/* PORCENTAJE */
+.porcentaje {
+    background: #555;
+    color: white;
+}
+
+/* BORRAR */
+.borrar {
+    background: #c0392b;
+    color: white;
+}
+
+.borrar:hover {
+    background: #e74c3c;
+}
+
+/* IGUAL */
+.igual {
+    grid-column: span 4;
+
+    background: #27ae60;
+    color: white;
+}
+
+.igual:hover {
+    background: #2ecc71;
+}
+
+/* ADAPTACIÓN PARA CELULAR */
+@media (max-width: 400px) {
+
+    .calculadora {
+        width: 92%;
+    }
+
+    .boton {
+        height: 55px;
+    }
+}
